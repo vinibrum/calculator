@@ -1,0 +1,41 @@
+#container {
+    background-color: #f2f2f2; 
+    width: 350px; 
+    height: 720px;
+    border: 1px solid #000;
+}
+
+#header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#div-title {
+    display: inline-block; 
+    position: relative; 
+    top: 9px; 
+    left: 8px; 
+    font-size: 9pt; 
+    width: 50%; 
+    cursor: default;
+}
+
+#div-bttn {
+    float: right;
+}
+
+.header-bttn {
+    width:  45px;
+    height: 35px;
+    border: 0;
+    background-color: #f2f2f2;
+    float: right;
+}
+
+.others-bttn:hover {
+    background-color: #d9d9d9;
+}
+
+.close-bttn:hover {
+    background-color: #e81123;
+    color: #fff;
+}
