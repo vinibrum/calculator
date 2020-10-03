@@ -1,16 +1,22 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="https://kit.fontawesome.com/7eaeb1fc25.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="container">
             <div id="header">
                 <div id="div-title">Calculadora</div>
                 <div id="div-bttn">
-                    <button class="header-bttn close-bttn">&times;</button>
-                    <button class="header-bttn others-bttn">&#9723;</button>
-                    <button class="header-bttn others-bttn">&#8210;</button>
+                    <button class="header-bttn close-bttn"><i class="far fa-window-close"></i></button>
+                    <button class="header-bttn others-bttn"><i class="far fa-window-maximize"></i></button>
+                    <button class="header-bttn others-bttn"><i class="far fa-window-minimize"></i></button>
                 </div>
+            </div>
+            <div style="position: relative; height: 40px">
+                <button class="normal-bttn others-bttn"><i class="fas fa-bars"></i></button>
+                <span style="font-family: Arial, Helvetica, sans-serif; font-weight: 600;">Padrão</span>
+                <button class="normal-bttn others-bttn" style="float: right;"><i class="fas fa-history"></i></button>
             </div>
         </div>
     </body>
