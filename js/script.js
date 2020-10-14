@@ -36,9 +36,24 @@ el = document.getElementById('negate-bttn');
 el.addEventListener('click', function(){
     let display = document.getElementById('display');
     let str = display.innerText;
-    let value = Number(str.replaceAll('.',''));
+    str = str.replaceAll('.','');
+    
+    let decimalSepIdx = str.indexOf(',');
+    if(decimalSepIdx != -1)  value = Number(str.replace(',','.'));
+    else                     value = Number(str);
     value = negate(value);
-    display.innerText = value <= 1000 || value >= 1000 ? addThousandSeparator(value.toString()) : value.toString();
+    str = value.toString();
+    let leftStr = '';
+    let rightStr = '';
+    if(decimalSepIdx != -1){
+        str = str.replace('.',',');
+        if(value <= -1000 || value >= 1000){
+            leftStr = str.substring(0, str.charAt(0) == '-' ? decimalSepIdx + 1 : decimalSepIdx);
+            rightStr = str.substring(str.charAt(0) == '-' ? decimalSepIdx + 1 : decimalSepIdx);
+        }
+    }
+    
+    display.innerText = (value <= -1000 || value >= 1000 ? addThousandSeparator(decimalSepIdx != -1 ? leftStr : str) : str) + (decimalSepIdx != -1 ? rightStr : '');
 });
 
 el = document.getElementById('decimal-sep-bttn');
