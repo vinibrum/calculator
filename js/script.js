@@ -32,6 +32,12 @@ el.addEventListener('click', function(){
     
 });
 
+el = document.getElementById('c-bttn');
+el.addEventListener('click', function(){
+    let display = document.getElementById('display');
+    display.innerText = '0';
+});
+
 el = document.getElementById('negate-bttn');
 el.addEventListener('click', function(){
     let display = document.getElementById('display');
